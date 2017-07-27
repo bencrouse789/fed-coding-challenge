@@ -1,0 +1,181 @@
+// bower:scss
+// endbower
+
+//font imports
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+//font variables
+$fontimus-prime: 'Lato', serif;
+
+//colors
+$boring-color: #222222;
+$fancy-color: #47e4c2;
+$emphasis-color: #e8a725;
+
+//screen sizes
+$break-small: 450px;
+$break-medium: 750px;
+$break-large: 1000px;
+$break-x-large: 1500px;
+
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+body {
+  background: #f2f1ef;
+  font-family: $fontimus-prime;
+  font-size: 12px;
+  color: #222222;
+}
+
+.container {
+  max-width: 3840px;
+  position: relative;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  @media screen and (min-width: $break-small) {
+      .offset-content {
+        margin: 0 auto;
+        width: 95%;
+      }
+  }
+  @media screen and (min-width: $break-large) {
+      .offset-content {
+        margin: 0 auto;
+        width: 80%;
+      }
+  }
+  @media screen and (min-width: $break-x-large) {
+      .offset-content {
+        margin: 0 auto;
+        width: 60%;
+      }
+  }
+}
+
+.item {
+  width: 100%;
+  float: left;
+  box-sizing: border-box;
+}
+
+.header {
+  height: 2em;
+  background-color: $boring-color;  
+  padding: 1em 0;
+  .logo {
+    width: 12em;
+    fill: $fancy-color;
+    &:hover {
+      fill: $emphasis-color;
+    }
+  }
+}
+
+.hero {
+  background-image: url(/images/photo-couch.jpg);
+  min-height: 30em;
+  @media screen and (min-width: $break-large) {
+    background-image: url(/images/photo-couch_2x.jpg);
+    min-height: 50em;
+  }
+  background-attachment: fixed;
+  background-size: cover;
+  .feature {
+    @media screen and (max-width: $break-large) {
+      text-align: center;
+      max-width: 500px;
+    }
+    line-height: 4em;
+    color: #fff;
+    .tagline {
+      font-size: 1.5em;
+      &.big {
+        font-size: 3em;
+      }
+    }
+    .description {
+      padding-top: 1em;
+      padding-bottom: 1em;
+      line-height: 1.5em;
+      font-size: 1.5em;
+      @media screen and (min-width: $break-large) {
+        max-width: 25em;
+      }
+    }
+    button {
+      border-radius: 2em;
+      background-color: $fancy-color;
+      border: 0;
+      color: $boring-color;
+      font-size: 1.2em;
+      font-weight: bold;
+      padding: 0.5em 1em;
+      &:hover {
+        background-color: $emphasis-color;
+        color: #fff;
+      }
+    }
+    @media screen and (min-width: $break-large) {
+      padding-top: 20em;
+    }
+  }
+}
+
+.details {
+  padding-top: 2em;
+  text-align: center;
+  .summary {
+    width: 100%;
+    font-size: 2em;
+    font-weight: bold;
+    margin: 0 auto;
+  }
+  .detail {
+    padding: 1em;
+    @media screen and (min-width: $break-small) {
+      width: 100%;
+      font-size: 1.2em;
+    }
+    @media screen and (min-width: $break-medium) {
+      width: 50%;
+      font-size: 1.2em;
+    }
+    @media screen and (min-width: $break-large) {
+      width: 25%;
+      font-size: 1.2em;
+    }
+    .title {
+      display: inline-block;
+      margin: 0 auto;
+      font-size: 3em;
+      position: relative;
+      margin-bottom: .2em;
+      padding-bottom: .2em;
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: $fancy-color;
+        height: 4px;
+        border-radius: 2px;
+      }
+    }
+    .tagline {
+      text-transform: uppercase;
+      font-weight: bold;
+      padding: .5em;
+    }
+    .description {
+      line-height: 1em;
+    }
+  }
+}
