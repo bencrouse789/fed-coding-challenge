@@ -1,0 +1,5 @@
+To run the project you must have node.js installed.
+Run these commands:
+npm install
+npm install gulp
+gulp serve
